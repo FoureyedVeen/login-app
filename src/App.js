@@ -1,9 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="login-box">
+      <h2>LOGIN</h2>
       
     </div>
   );
