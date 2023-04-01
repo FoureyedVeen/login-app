@@ -1,9 +1,13 @@
 import './App.css';
+import Form from './Components/Form';
 
 function App() {
   return (
-    <div className="login-box">
-      <h2>LOGIN</h2>
+    <div className="container">
+      <div className='login-box'>
+        <h2>LOGIN</h2>
+        <Form />
+      </div>
       
     </div>
   );
