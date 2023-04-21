@@ -19,7 +19,7 @@
     /* background-color: red; */
 }
 
-input {
+.input {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -48,7 +48,7 @@ label {
     z-index: 0;
 }
 
-input:focus + label {
+.input:focus + label {
     top: -7px;
     left: 3px;
     z-index: 10;
@@ -56,7 +56,7 @@ input:focus + label {
     font-weight: 600;
 }
 
-input:not(:placeholder-shown)+ label {
+.input:not(:placeholder-shown)+ label {
     top: -12px;
     left: 3px;
     z-index: 10;

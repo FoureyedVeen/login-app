@@ -1,5 +1,6 @@
-import './App.css';
-import Form from './Components/Form';
+import "./App.css"
+import Form from './routes/Form';
+
 
 function App() {
   return (
@@ -8,7 +9,6 @@ function App() {
         <h2 id='login'>LOGIN</h2>
         <Form />
       </div>
-      
     </div>
   );
 }
