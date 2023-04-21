@@ -1,4 +1,4 @@
-import "./Register.css"
+import "../Components/Register.css"
 
 
 

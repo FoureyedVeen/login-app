@@ -7,16 +7,18 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Register from "../src/routes/Register"
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world</div>
-      
-      
-  
+    element: <App />
   },
+  {
+    path:"/register",
+    element: <Register />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

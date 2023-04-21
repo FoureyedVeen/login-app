@@ -17,7 +17,7 @@ function Form () {
                 <button className='button'>Login</button>
             </div>
             <div className='signup-box'>
-                <p className='signup-text'>Not a member ? <a href= "#" className='signup-link'>Sign up</a></p>
+                <p className='signup-text'>Not a member ? <a href= {`/register`} className='signup-link'>Sign up</a></p>
             </div>
         </form>
         </>
