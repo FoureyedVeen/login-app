@@ -1,16 +1,35 @@
 import '../Components/Form.css'
-
+import { auth } from '../firebase';
+import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 function Form () {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const signIn = async (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth,email,password)
+        .then((userCredential)=>{
+            console.log(userCredential)
+        }).catch((error =>{
+            console.log(error);
+        }))
+    }
     return (
         <>
-        <form className='form'>
+        <form className='form' onSubmit={signIn}>
             <div className='user-box'>
-                <input type={"text"} placeholder={""} className='input'></input>
-                <label>Username / Email</label>
+                <input type="email" placeholder={""} value={email}
+                    className='input' onChange={(e) => setEmail(e.target.value)}
+                />
+                <label> Email</label>
             </div>
             <div className='user-box'>
-                <input type={"text"} name = {"password"} for={""} placeholder={""} className='input'></input>
+                <input type="password" name = {"password"} 
+                     placeholder={""} className='input'
+                    onChange={(e) => setPassword(e.target.value)}
+                />
                 <label>Password</label>
             </div>
             <div className='button-container'>
