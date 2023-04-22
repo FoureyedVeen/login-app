@@ -5,7 +5,7 @@ import {createUserWithEmailAndPassword} from "firebase/auth"
 
 
 
-// src/firebase.js
+// Firebase authentication for a Sign up/Register page
 
 function Register() {
     const [firstName, setFirstName] = useState('');
@@ -22,53 +22,9 @@ function Register() {
             console.log(error);
         }))
     }
-    //     try {
-    //       const { user } = await createUserWithEmailAndPassword(email, password);
-          
-    //       await user.updateProfile({
-    //         displayName: `${firstName} ${lastName}`
-    //       });
-    //       setFirstName('');
-    //       setLastName('');
-    //       setEmail('');
-    //       setPassword('');
-    //       console.log(user);
-    //     } catch (error) {
-    //       console.error(error);
-    //     }
-    //   };
-
-    // const register = e => {
-        
-    //       // Create a new user with email and password using firebase
-    //         createUserWithEmailAndPassword(auth, email, password)
-    //         .then((res) => {
-    //             console.log(res.user)
-    //           })
-    //         .catch(err => err.message)
-    //     setFirstName('')
-    //     setLastName('')
-    //     setEmail('')
-    //     setPassword('')
-        
-    // }
-    //   console.log(createUserWithEmailAndPassword)
-    // const handleSubmit = (user) => {
-          
-    //     createUserWithEmailAndPassword(auth, firstName,lastName,email,password)
-    //         .then((userCredential) => {
-    //                 // Signed in 
-    //             const user = userCredential.user;
-    //             console.log(user)
-    //         })
-    //         .catch((error) => {
-    //             console.log(error)
-    //             // ..
-    //         });
-
-          
-        
-    // }
+   
+    
+   
     return (
         <>
             <div className="container">
