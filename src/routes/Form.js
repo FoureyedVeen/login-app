@@ -10,6 +10,7 @@ function Form () {
     const signIn = async (e) => {
         e.preventDefault();
         signInWithEmailAndPassword(auth,email,password)
+        
         .then((userCredential)=>{
             console.log(userCredential)
         }).catch((error =>{
