@@ -1,6 +1,6 @@
 import "../Components/Register.css";
 import { useState} from "react";
-import {auth} from "../firebase"
+import {auth} from "../Firebase"
 import {createUserWithEmailAndPassword} from "firebase/auth"
 
 
@@ -16,8 +16,13 @@ function Register() {
     const signUp = async (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth,email,password)
-        .then((userCredential)=>{
-            console.log(userCredential)
+        .then((response)=>{
+            // settign auth token to local storage
+             sessionStorage.setItem(
+               "Auth Token",
+               response._tokenResponse.refreshToken
+             ); 
+            console.log("registered");
         }).catch((error =>{
             console.log(error);
         }))

@@ -1,15 +1,17 @@
-import "./App.css"
-import Form from './routes/Form';
-
-
+import "./App.css";
+import Form from "./routes/Form";
+import { BrowserRouter as Router, Routes,Route} from "react-router-dom";
+import Register from "./routes/Register";
+import Home from "./routes/Home"
 function App() {
   return (
-    <div className="container">
-      <div className='login-box'>
-        <h2 id='login'>LOGIN</h2>
-        <Form />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Form />} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/home" element={<Home/>}/>
+      </Routes>
+    </Router>
   );
 }
 
