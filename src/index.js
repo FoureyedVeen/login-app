@@ -8,17 +8,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Register from "../src/routes/Register"
+import Home from './routes/Home';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: <App />,
   },
   {
-    path:"/register",
-    element: <Register />
-  }
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/home",
+    element: <Home/>,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
